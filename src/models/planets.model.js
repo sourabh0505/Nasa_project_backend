@@ -13,7 +13,7 @@ const HabitablePlanet = (planet) => {
 }
 
 const loadPlanets = () => new Promise((resolve,reject) =>{
-        fs.createReadStream(path.join(__dirname,'..','..','data','kepler_data.csv'))
+        fs.createReadStream("./kepler_data.csv")
         .pipe(parse({
             comment: '#',
             columns: true
